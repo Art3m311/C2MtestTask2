@@ -5,9 +5,8 @@ import static com.codeborne.selenide.Selenide.sleep;
 
 public class PhotoToGit {
 
-    public  final static String BASE_URL = "https://www.google.com/";
-    public  final static String NAME_INPUT = "Артем Журкин";
-    public String urlImg;
+    public final static String BASE_URL = "https://www.google.com/";
+    public final static String NAME_INPUT = "Артем Журкин";
     public static void getPhoto() throws IOException, URISyntaxException {
         StartPage startPage = new StartPage(BASE_URL); //заходим в google.com
         SearchResultPage searchResult = new SearchResultPage();
@@ -18,15 +17,6 @@ public class PhotoToGit {
         sleep(1000);
         imagesPage.openImage(); // Открыть искомое изображение
         imagesPage.getURL(); // достать url картинки
-        imagesPage.openNewTab();
-
-
-
-        //imagesPage.openMenu();
-        //imagesPage.openSend();
-        //imagesPage.download();
-        //urlImg =  imagesPage.targetImage.getAttribute("src");
-
-        int a = 0;
+        imagesPage.openNewTab(); //открываем картинку в новой вкладке
     }
 }

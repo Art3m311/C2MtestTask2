@@ -1,8 +1,6 @@
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
-import net.bytebuddy.asm.Advice;
 import org.openqa.selenium.Keys;
-
 import static com.codeborne.selenide.Selenide.$x;
 
 /**
@@ -17,12 +15,9 @@ public class StartPage {
 
     /**
      * Ввод в форму поиска google информации и выполнение поиска
-     * @param searchInfo
      */
     public void search(String searchInfo) {
         inputForm.setValue(searchInfo);
         inputForm.sendKeys(Keys.ENTER);
     }
-
-
 }
